@@ -1,0 +1,21 @@
+import random
+
+
+def gera():
+    return random.randint(1, 100)
+def game():
+    resposta = gera()
+    tentativa = 0
+    print("\nDigite o seu numero!")
+    numero = 0
+    while numero is not resposta:
+        tentativa += 1
+        chute = int(input("Digite um número: "))
+        if chute > resposta:
+            print("Errou! Digite um valor menor que ", chute)
+        elif chute < resposta:
+            print("Errou! Digite um valor maior que ", chute)
+        else:
+            print("Ótimo, o número correto é ", resposta, "Acertou em ", tentativa, " tentativas!")
+while True:
+    game()
